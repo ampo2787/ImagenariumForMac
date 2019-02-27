@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -49,6 +50,31 @@
                                         <menuItem title="Quit Assignment04" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Photo" id="fX9-XP-tIy">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Photo" id="sTo-TJ-Rah">
+                                    <items>
+                                        <menuItem title="Flower" id="zvX-lr-eof">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="SelectItem:" target="Voe-Tx-rLC" id="Kjo-Eb-32Y"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Peppers" id="XLe-tH-bUM">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="SelectItem:" target="Voe-Tx-rLC" id="i7w-2W-yKy"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Jellyfish" id="VMK-69-dGt">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="SelectItem:" target="Voe-Tx-rLC" id="Vf4-8g-cGu"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -673,7 +699,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider=""/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -693,25 +719,155 @@
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="gvK-4D-XuH" kind="relationship" relationship="window.shadowedContentViewController" id="XJK-z1-Xb9"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="87" y="250"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="hIz-AP-VOD">
+        <!--Split View Controller-->
+        <scene sceneID="jDA-1P-q5V">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <splitViewController id="gvK-4D-XuH" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="X4U-Pc-TiF"/>
+                        <splitViewItem id="Kle-ma-Vex"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="U72-Gh-gb1">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                        <connections>
+                            <outlet property="delegate" destination="gvK-4D-XuH" id="KbR-Tn-NA8"/>
+                        </connections>
+                    </splitView>
+                    <connections>
+                        <outlet property="splitView" destination="U72-Gh-gb1" id="LGd-Io-InO"/>
+                        <segue destination="ZGG-hf-LWc" kind="relationship" relationship="splitItems" id="1y5-jC-oPx"/>
+                        <segue destination="BIM-8e-ITd" kind="relationship" relationship="splitItems" id="YGm-dD-shq"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="Cf5-yt-x7G" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="616" y="241"/>
+        </scene>
+        <!--Text View Controller-->
+        <scene sceneID="vQd-ej-TMP">
+            <objects>
+                <viewController id="ZGG-hf-LWc" customClass="TextViewController" sceneMemberID="viewController">
+                    <view key="view" id="0VD-cq-wnK">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2ZH-Ss-t2T">
+                                <rect key="frame" x="193" y="139" width="64" height="23"/>
+                                <buttonCell key="cell" type="roundTextured" title="Peppers" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cz9-00-pbq">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pepperBtnTouched:" target="ZGG-hf-LWc" id="rRq-OS-w5g"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6fh-eX-Tg3">
+                                <rect key="frame" x="193" y="72" width="64" height="23"/>
+                                <buttonCell key="cell" type="roundTextured" title="Jellyfish" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sel-WU-7Ea">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="jellyfishBtnTouched:" target="ZGG-hf-LWc" id="EZ8-qM-US7"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3zV-0c-KDJ">
+                                <rect key="frame" x="198" y="206" width="54" height="23"/>
+                                <buttonCell key="cell" type="roundTextured" title="Flower" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YHa-Pp-LhD">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="flowerBtnTouched:" target="ZGG-hf-LWc" id="DDW-0f-ZII"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2ZH-Ss-t2T" secondAttribute="trailing" constant="20" symbolic="YES" id="1hS-Lz-fdt"/>
+                            <constraint firstItem="3zV-0c-KDJ" firstAttribute="top" secondItem="0VD-cq-wnK" secondAttribute="top" constant="71" id="1wQ-ID-T7e"/>
+                            <constraint firstAttribute="bottom" secondItem="6fh-eX-Tg3" secondAttribute="bottom" constant="73" id="HZK-kI-5dG"/>
+                            <constraint firstItem="2ZH-Ss-t2T" firstAttribute="leading" secondItem="0VD-cq-wnK" secondAttribute="leading" constant="193" id="OO1-Vi-0Qw"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6fh-eX-Tg3" secondAttribute="trailing" symbolic="YES" id="YF3-wF-m5g"/>
+                            <constraint firstItem="6fh-eX-Tg3" firstAttribute="top" secondItem="2ZH-Ss-t2T" secondAttribute="bottom" constant="45" id="dow-0w-fwa"/>
+                            <constraint firstItem="2ZH-Ss-t2T" firstAttribute="top" secondItem="3zV-0c-KDJ" secondAttribute="bottom" constant="45" id="goy-hi-flE"/>
+                            <constraint firstItem="6fh-eX-Tg3" firstAttribute="leading" secondItem="0VD-cq-wnK" secondAttribute="leading" constant="193" id="jXG-JH-Hee"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3zV-0c-KDJ" secondAttribute="trailing" constant="20" symbolic="YES" id="sS2-Ie-33t"/>
+                            <constraint firstItem="3zV-0c-KDJ" firstAttribute="leading" secondItem="0VD-cq-wnK" secondAttribute="leading" constant="198" id="yHz-sY-luL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="flowerBtn" destination="3zV-0c-KDJ" id="NHQ-wB-ZhW"/>
+                        <outlet property="jellyfishBtn" destination="6fh-eX-Tg3" id="Hcp-Sj-GKW"/>
+                        <outlet property="peppersBtn" destination="2ZH-Ss-t2T" id="hbB-59-H2k"/>
+                    </connections>
+                </viewController>
+                <customObject id="BzK-S9-Mkb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1286" y="55"/>
+        </scene>
+        <!--Imaginarium View Controller-->
+        <scene sceneID="pZY-4J-NDA">
+            <objects>
+                <viewController id="BIM-8e-ITd" customClass="ImaginariumViewController" sceneMemberID="viewController">
+                    <view key="view" id="Uyp-pn-B6n">
+                        <rect key="frame" x="0.0" y="0.0" width="449" height="301"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1zX-tB-Kgn">
+                                <rect key="frame" x="177" y="1" width="95" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <sliderCell key="cell" state="on" alignment="left" minValue="25" maxValue="100" doubleValue="25" tickMarkPosition="above" sliderType="linear" id="3RD-Eu-bCH"/>
+                                <connections>
+                                    <action selector="sliderChange:" target="BIM-8e-ITd" id="Jj6-BO-ayO"/>
+                                </connections>
+                            </slider>
+                            <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzw-1k-5vx">
+                                <rect key="frame" x="0.0" y="26" width="449" height="275"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <clipView key="contentView" ambiguous="YES" id="ext-F2-NX5">
+                                    <rect key="frame" x="1" y="1" width="447" height="273"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dNR-Kz-OTO">
+                                            <rect key="frame" x="0.0" y="0.0" width="432" height="258"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="4FJ-dR-BlA">
+                                                    <rect key="frame" x="208" y="121" width="16" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                </progressIndicator>
+                                            </subviews>
+                                        </view>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Oij-Um-hdt">
+                                    <rect key="frame" x="1" y="258" width="447" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="E3c-fp-15Y">
+                                    <rect key="frame" x="432" y="1" width="16" height="273"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="dzw-1k-5vx" id="Xuw-dl-aLM"/>
+                        <outlet property="spinner" destination="4FJ-dR-BlA" id="oRj-vk-9N3"/>
+                        <outlet property="zoomSlider" destination="1zX-tB-Kgn" id="fVD-bi-OEZ"/>
+                    </connections>
+                </viewController>
+                <customObject id="fzT-dD-6rz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1285.5" y="426.5"/>
         </scene>
     </scenes>
 </document>

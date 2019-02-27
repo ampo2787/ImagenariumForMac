@@ -8,23 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		7A24280121B1242600F17277 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24280021B1242600F17277 /* AppDelegate.m */; };
-		7A24280421B1242600F17277 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24280321B1242600F17277 /* ViewController.m */; };
 		7A24280621B1242700F17277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A24280521B1242700F17277 /* Assets.xcassets */; };
 		7A24280921B1242700F17277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A24280721B1242700F17277 /* Main.storyboard */; };
 		7A24280C21B1242700F17277 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24280B21B1242700F17277 /* main.m */; };
+		7A24281521B1244000F17277 /* ImaginariumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24281421B1244000F17277 /* ImaginariumViewController.m */; };
+		7A24281B21B1258900F17277 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24281A21B1258900F17277 /* TextViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7A2427FC21B1242600F17277 /* Assignment04.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment04.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2427FF21B1242600F17277 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7A24280021B1242600F17277 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7A24280221B1242600F17277 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7A24280321B1242600F17277 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7A24280521B1242700F17277 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A24280821B1242700F17277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A24280A21B1242700F17277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A24280B21B1242700F17277 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A24280D21B1242700F17277 /* Assignment04.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Assignment04.entitlements; sourceTree = "<group>"; };
+		7A24281321B1244000F17277 /* ImaginariumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImaginariumViewController.h; sourceTree = "<group>"; };
+		7A24281421B1244000F17277 /* ImaginariumViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImaginariumViewController.m; sourceTree = "<group>"; };
+		7A24281921B1258900F17277 /* TextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
+		7A24281A21B1258900F17277 /* TextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,17 +60,43 @@
 		7A2427FE21B1242600F17277 /* Assignment04 */ = {
 			isa = PBXGroup;
 			children = (
+				7A24281821B1244F00F17277 /* Controller */,
+				7A24281721B1244B00F17277 /* View */,
+				7A24281621B1244300F17277 /* Model */,
 				7A2427FF21B1242600F17277 /* AppDelegate.h */,
 				7A24280021B1242600F17277 /* AppDelegate.m */,
-				7A24280221B1242600F17277 /* ViewController.h */,
-				7A24280321B1242600F17277 /* ViewController.m */,
 				7A24280521B1242700F17277 /* Assets.xcassets */,
-				7A24280721B1242700F17277 /* Main.storyboard */,
 				7A24280A21B1242700F17277 /* Info.plist */,
 				7A24280B21B1242700F17277 /* main.m */,
 				7A24280D21B1242700F17277 /* Assignment04.entitlements */,
 			);
 			path = Assignment04;
+			sourceTree = "<group>";
+		};
+		7A24281621B1244300F17277 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7A24281721B1244B00F17277 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7A24280721B1242700F17277 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7A24281821B1244F00F17277 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7A24281321B1244000F17277 /* ImaginariumViewController.h */,
+				7A24281421B1244000F17277 /* ImaginariumViewController.m */,
+				7A24281921B1258900F17277 /* TextViewController.h */,
+				7A24281A21B1258900F17277 /* TextViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,6 +130,11 @@
 				TargetAttributes = {
 					7A2427FB21B1242600F17277 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -139,9 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A24280421B1242600F17277 /* ViewController.m in Sources */,
+				7A24281521B1244000F17277 /* ImaginariumViewController.m in Sources */,
 				7A24280C21B1242700F17277 /* main.m in Sources */,
 				7A24280121B1242600F17277 /* AppDelegate.m in Sources */,
+				7A24281B21B1258900F17277 /* TextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
